@@ -2,18 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-black text-white relative font-sans h-screen overflow-x-hidden;
+/* 🎨 BRAND COLOR UTILITIES */
+@layer utilities {
+  /* Main gradient (Hero / highlights) */
+  .gradient {
+    background: linear-gradient(-45deg, #578891, #eabc94, #c58f72);
+  }
+
+  /* CTA gradient */
+  .gradient-cta {
+    background: linear-gradient(90deg, #578891, #bf5d59);
+  }
+
+  /* Text gradient (for headings like "Brand Story") */
+  .text-gradient {
+    background: linear-gradient(90deg, #578891, #eabc94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Glow effects */
+  .glow-teal {
+    box-shadow: 0 0 40px rgba(87, 136, 145, 0.3);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 40px rgba(191, 93, 89, 0.3);
+  }
+
+  /* Soft background glow */
+  .bg-glow {
+    background: radial-gradient(
+      circle at center,
+      rgba(87, 136, 145, 0.15),
+      transparent 70%
+    );
   }
 }
 
-body{
-  font-family: "poppins", sans-serif ;
+/* 🧱 BASE STYLES */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000; /* main background */
+  color: #ffffff;
 }
 
-h1, h2 {
+/* HEADINGS */
+h1,
+h2 {
   font-family: "Roboto", sans-serif;
-  
 }
 
+/* TEXT COLORS */
+.text-secondary {
+  color: #c6b6b3;
+}
+
+.text-muted {
+  color: #767474;
+}

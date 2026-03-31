@@ -3,7 +3,7 @@ import React from "react";
 function Projects() {
   return (
     <>
-      <div>Projects</div>
+      <div className="w-full h-screen">Projects</div>
     </>
   );
 }
